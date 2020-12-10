@@ -1,18 +1,11 @@
 import React from 'react';
 
-type WeatherProps = {
-    name: string,
-    temp: any,
-    weather: any,
-
-}
-
-const Weather = ({name, temp, weather}: WeatherProps) => {
+const Weather = (props: any) => {
 
     return(
         <div>
-            <p>Here is the weather for {name}:</p>
-            <p>It is currently {weather.description} with a temp of {temp.temp} degrees with a high of {temp.temp_max} degrees and a low of {temp.temp_min} degrees.</p>
+            <p>Here is the weather for {props.name}:</p>
+            <p>It is currently {props.weather.description} with a temp of {props.temp.temp}°F with a high of {props.temp.temp_max}°F and a low of {props.temp.temp_min}°F.</p>
         </div>
     )
 }
